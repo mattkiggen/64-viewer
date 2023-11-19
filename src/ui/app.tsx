@@ -1,10 +1,19 @@
 import { createRoot } from 'react-dom/client';
+import { Theme } from '@radix-ui/themes';
+import '@radix-ui/themes/styles.css';
+import './app.css';
+import MainPage from './MainPage';
 
 const App = () => {
   return (
-    <div>
-      <h1>hello from react</h1>
-    </div>
+    <Theme
+      accentColor='cyan'
+      grayColor='gray'
+      panelBackground='solid'
+      scaling='100%'
+      radius='large'>
+      <MainPage />
+    </Theme>
   );
 };
 
